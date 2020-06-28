@@ -5,18 +5,23 @@
 using std::cout;
 using std::cin;
 
+int doubleDigitValue(int digit) {
+	int doubledDigit = digit * 2;
+	int sum;
+	if (doubledDigit >= 10) sum = 1 + doubledDigit % 10;
+	else sum = doubledDigit;
+	return sum;
+}
+
 int main()
 {
 	int digit;
 	cout << "Enter a single digit number, 0-9: ";
 	cin >> digit;
-	int doubledDigit = digit * 2;
-	int sum;
-	if (doubledDigit >= 10) sum = 1 + doubledDigit % 10;
-	else sum = doubledDigit;
-
+	int sum = doubleDigitValue(digit);
 	cout << "Sum of digits in doubled number: " << sum << "\n";
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
